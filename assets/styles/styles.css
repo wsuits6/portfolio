@@ -634,3 +634,68 @@
 .profile-frame.badge:hover {
     transform: scale(1.1);
 }
+
+
+/* Floating Bubbles */
+.floating-bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1; /* visible but still behind main content */
+}
+
+.bubble {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatBubble linear infinite;
+    filter: drop-shadow(0 0 15px var(--cyan));
+    mix-blend-mode: screen;
+    object-fit: cover;
+}
+
+/* Specific child offsets */
+.bubble:nth-child(1) {
+    left: 10%;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+.bubble:nth-child(2) {
+    left: 35%;
+    animation-duration: 25s;
+    animation-delay: 5s;
+}
+.bubble:nth-child(3) {
+    left: 60%;
+    animation-duration: 22s;
+    animation-delay: 2s;
+}
+.bubble:nth-child(4) {
+    left: 80%;
+    animation-duration: 28s;
+    animation-delay: 7s;
+}
+
+/* Floating upward animation */
+@keyframes floatBubble {
+    0% {
+        transform: translateY(100vh) scale(0.9);
+        opacity: 0.3;
+    }
+    30% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-150px) scale(1.1);
+        opacity: 0.2;
+    }
+}
