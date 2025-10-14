@@ -38,23 +38,24 @@
             </div>
         </div>
     </section>
+<!-- Filter Section -->
+<section class="filter-section">
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="security">Cybersecurity</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ai">AI & Automation</button>
+        <button class="filter-btn" data-filter="framework">Frameworks</button>
+        <button class="filter-btn" data-filter="tools">Tools & Utilities</button>
+    </div>
+</section>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="ai">AI & Automation</button>
-            <button class="filter-btn" data-filter="tools">Tools & Utilities</button>
-        </div>
-    </section>
 
  <section class="projects-section">
     <div class="projects-grid">
 
         <!-- Project 1 -->
-        <div class="project-card" data-category="security">
+        <div class="project-card" data-category="framework">
             <div class="project-image">
                 <div class="project-overlay">
                     <span class="view-details">View Details</span>
@@ -94,7 +95,7 @@
                     <span class="tag">AI</span>
                     <span class="tag">Terminal</span>
                 </div>
-                <h3>Red Specter AI</h3>
+                <h3>Redspecter AI</h3>
                 <p>An AI agent that lives in your terminal, assisting with tasks and providing intelligent insights. Still under development.</p>
                 <div class="project-meta">
                     <span class="meta-item">🤖 AI</span>
@@ -265,6 +266,29 @@
     <footer>
         <p>&copy; 2025 Wsuits Industries. Crafted with precision and innovation.</p>
     </footer>
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projects = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projects.forEach(project => {
+            if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
