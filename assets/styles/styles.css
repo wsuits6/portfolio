@@ -142,7 +142,7 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 20px;
             background: linear-gradient(135deg, var(--cyan), var(--purple), var(--magenta));
             -webkit-background-clip: text;
@@ -333,7 +333,7 @@
     padding: 100px 5%;
     max-width: 1400px;
     margin: 0 auto;
-    background: url('../images/vision-bg.png') no-repeat center center/cover;
+    background: url('../images/phil2.png') no-repeat center center/cover;
     color: #fff;
     overflow: hidden;
 }
