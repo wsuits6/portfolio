@@ -38,8 +38,8 @@
 
         .circuit-line {
             position: absolute;
-            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--magenta), transparent);
+            height: 4px;
             animation: circuitFlow 8s linear infinite;
             opacity: 0.3;
         }
@@ -61,8 +61,8 @@
         }
 
         @keyframes gridPulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.7; }
         }
 
         /* Navigation */
@@ -436,9 +436,8 @@
         .social-icon {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
+            border-radius: 20%;
             background: var(--card-bg);
-            border: 2px solid var(--cyan);
             display: flex;
             align-items: center;
             justify-content: center;
