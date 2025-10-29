@@ -247,6 +247,8 @@ nav .container {
     height: 200px;
     background: linear-gradient(135deg, var(--deep-blue), var(--primary-blue));
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .project-overlay {
