@@ -238,25 +238,7 @@
     </footer>
 
 
-<script>
-    // Select elements
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-
-    // Toggle menu
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); // show/hide nav on mobile
-        burger.classList.toggle('toggle');   // animate burger icon
-    });
-
-    // Optional: close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            burger.classList.remove('toggle');
-        });
-    });
-</script>
+<script src="./assets/scripts/script.js"></script>
 
 </body>
 </html>
