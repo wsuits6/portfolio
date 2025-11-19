@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/styles/skills.css">
     <link rel="stylesheet" href="./assets/styles/projects.css">
     <link rel="stylesheet" href="./assets/styles/contact.css">
+    <link rel="stylesheet" href="./assets/styles/navbar.css">
 </head>
 <body>
 
@@ -17,10 +18,13 @@
     <!---Emppty for a reason ahah-->
     <div class="bg-grid"></div>
 
-    <!--navbar and menu DIVS-->
-    <nav>
+<!-- NAVBAR -->
+<nav>
     <div class="container">
+        <!-- Logo -->
         <div class="logo">WSUITS6</div>
+
+        <!-- Navigation Links -->
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -28,6 +32,8 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- Hamburger Menu -->
         <div class="burger">
             <span></span>
             <span></span>
@@ -35,6 +41,7 @@
         </div>
     </div>
 </nav>
+
 
 
     <!--Hero section-->
@@ -230,6 +237,26 @@
         <p>&copy; 2025 Wsuits Industries. Crafted with precision and innovation.</p>
     </footer>
 
-    <script src="./assets/scripts/script.js"></script>
+
+<script>
+    // Select elements
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Toggle menu
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // show/hide nav on mobile
+        burger.classList.toggle('toggle');   // animate burger icon
+    });
+
+    // Optional: close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            burger.classList.remove('toggle');
+        });
+    });
+</script>
+
 </body>
 </html>
