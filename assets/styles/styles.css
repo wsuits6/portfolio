@@ -1,9 +1,8 @@
 /* ========================================
-   MODERN TECH STARTUP PORTFOLIO CSS
-   Clean, Light, Animated - ApeChan Style
+Cleanup of CSS inspired by Hackerboost UI 
    ======================================== */
 
-/* Root Variables */
+/* Setting of CS varibles */
 :root {
     --primary: #0066ff;
     --primary-light: #3d8bff;
@@ -22,7 +21,7 @@
     --gradient-blue: linear-gradient(135deg, #0066ff 0%, #6366f1 100%);
 }
 
-/* Reset & Base Styles */
+/* FOundtional styles*/
 * {
     margin: 0;
     padding: 0;
