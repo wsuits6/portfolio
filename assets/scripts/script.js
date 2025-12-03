@@ -13,3 +13,19 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         burger.classList.remove('toggle');
     });
 });
+
+
+
+// Theme Switching
+const themeButtons = document.querySelectorAll('.theme-btn');
+const html = document.documentElement;
+
+themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const theme = btn.dataset.theme;
+
+        // remove all theme classes before applying a new one
+        html.classList.remove('light-theme', 'dark-theme', 'hacker-theme', 'webdev-theme');
+        html.classList.add(theme);
+    });
+});

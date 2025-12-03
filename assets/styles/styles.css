@@ -203,6 +203,33 @@ nav {
     }
 }
 
+.theme-switcher {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 9999;
+}
+
+.theme-switcher .theme-btn {
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.theme-switcher .theme-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+
 .header-container {
     padding: 1rem 1.25rem;
     display: flex;
@@ -1137,3 +1164,6 @@ footer p {
     background: var(--primary);
     color: white;
 }
+
+
+
